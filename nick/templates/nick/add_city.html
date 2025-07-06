@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block content %}
+<form method="post" class="weather-container">
+  {% csrf_token %}
+  <label for="city"><strong>Enter City</strong></label>
+
+  <input type="text" name="city" id="city" required />
+  <a href="{% url 'weather' %}"><button type="submit">Add City</button></a>
+</form>
+{% if error %}
+<p>{{ error }}</p>
+{% endif %} {% endblock %}

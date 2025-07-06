@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+  </head>
+  <!-- Add the dynamic theme class to the <body> -->
+  <body class="{{ theme }}">
+    <!-- Navbar -->
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/weather-data">Weather</a></li>
+        <li><a href="/add-city" class="plus-button">Add City</a></li>
+        <li><a href="/saved-cities">Saved Cities</a></li>
+        <li><a href="/geo-location">GeoLocation</a></li>
+      </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+      <h1>Welcome to the Weather App</h1>
+    </header>
+
+    <!-- Main content will be injected here -->
+    {% block content %} {% endblock %}
+  </body>
+</html>

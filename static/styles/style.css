@@ -1,0 +1,135 @@
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black; /* Ensure text is visible on dark backgrounds */
+  transition: background 0.5s ease; /* Smooth transition for background change */
+}
+
+/* Navbar Styling */
+nav {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Header Styling */
+header {
+  background-color: #4caf50;
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+
+/* Weather Container */
+.weather-container {
+  color: #4caf50;
+  text-align: center;
+  padding: 50px;
+  font-size: 30px;
+}
+
+.weather-form {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Weather Information Box */
+.weather-info {
+  margin-top: 20px;
+  text-align: center;
+  display: grid;
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 20px;
+  background-color: #0000; /* Light background color for the box */
+  border: 5px solid #0000; /* Blue border around the box */
+  border-radius: 30px; /* Rounded corners for the box */
+  box-shadow: 0 4px 10px red; /* Soft shadow */
+  max-width: 500px; /* Max width for the box */
+  margin: 26px auto;
+  font-weight: bold;
+}
+
+/* City Information */
+#city {
+  text-align: center;
+  display: grid;
+  grid-template-rows: auto;
+  box-shadow: 0 0 0 black; /* Soft shadow */
+  margin-left: 625px;
+  font-weight: bold;
+}
+
+#qwe {
+  text-align: center;
+}
+
+#demo {
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  color: green;
+  padding: 10px;
+}
+
+/* Dynamic Background Themes */
+body.sunny-theme {
+  background: url("/static/images/sunny.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.cloudy-theme {
+  background: url("/static/images/cloudy.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.rainy-theme {
+  background: url("/static/images/rainy.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.snowy-theme {
+  background: url("/static/images/snowy.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.stormy-theme {
+  background: url("/static/images/stormy.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.misty-theme {
+  background: url("/static/images/misty.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Default fallback theme */
+.default-theme {
+  background: url("/static/images/default.jpg") no-repeat center center fixed;
+  background-size: cover;
+}

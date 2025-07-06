@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block content %}
+<h2>Saved Cities</h2>
+<ol>
+  {% for city in weather_data %}
+  <li>
+    <p>City: {{ city.city }}</p>
+    <p>Temperature: {{ city.temperature }}°C</p>
+    <p>Description: {{ city.description }}</p>
+  </li>
+  {% empty %}
+  <li>No cities saved yet.</li>
+  {% endfor %}
+</ol>
+{% endblock %}

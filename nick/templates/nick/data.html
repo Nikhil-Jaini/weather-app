@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block content %} {% if error_message %}
+<p class="error-message">{{ error_message }}</p>
+{% endif %} {% if weather_data %}
+<div class="weather-info">
+  <h2>
+    <u>Weather in {{ weather_data.name }}</u>
+  </h2>
+  <p>
+    <u><strong>Temperature:</strong></u> {{ weather_data.main.temp }}°C
+  </p>
+  <p>
+    <u><strong>Humidity:</strong></u> {{ weather_data.main.humidity }}%
+  </p>
+  <p>
+    <u><strong>Weather:</strong></u> {{ weather_data.weather.0.description }}
+  </p>
+  <p>
+    <u><strong>Wind Speed:</strong></u> {{ weather_data.wind.speed }} m/s
+  </p>
+</div>
+{% endif %} {% endblock %}
